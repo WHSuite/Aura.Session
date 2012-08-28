@@ -6,8 +6,9 @@ layout: default
 Aura.Session
 ============
 
-The Aura Session package session management functionality, including session
-segments, read-once ("flash") values, CSRF tools, and lazy session starting.
+The Aura Session package provides session management functionality, including
+session segments, read-once ("flash") values, CSRF tools, and lazy session
+starting.
 
 Versions
 --------
