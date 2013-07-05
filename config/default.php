@@ -17,11 +17,11 @@ $di->params['Aura\Session\CsrfTokenFactory']['randval'] = $di->lazyNew('Aura\Ses
 /**
  * Aura\Session\Manager
  */
-$di->params['Aura\Session\Manager'] = [
+$di->params['Aura\Session\Manager'] = array(
     'segment_factory' => $di->lazyNew('Aura\Session\SegmentFactory'),
     'csrf_token_factory' => $di->lazyNew('Aura\Session\CsrfTokenFactory'),
     'cookies' => $_COOKIE,
-];
+);
 
 /**
  * Aura\Session\Randval
@@ -31,6 +31,6 @@ $di->params['Aura\Session\Randval']['phpfunc'] = $di->lazyNew('Aura\Session\Phpf
 /**
  * Aura\Session\Segment
  */
-$di->params['Aura\Session\Segment'] = [
+$di->params['Aura\Session\Segment'] = array(
     'session' => $di->lazyGet('session_manager'),
-];
+);

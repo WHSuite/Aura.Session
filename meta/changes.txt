@@ -1,3 +1,5 @@
+- [CHG] Added support for PHP 5.3
+
 There are BC breaks in this release, but it's a Google beta, so ...
 
 - [SEC] Based on conversation at
@@ -17,7 +19,7 @@ There are BC breaks in this release, but it's a Google beta, so ...
 - [BRK] Renamed Manager::isActive() to isAvailable(), to differentiate from
   PHP_SESSION_ACTIVE. ( Previously, isActive() only told you if a session had
   started, not if one was available to be activated.)
-    
+
 - [CHG] Manager::getSegment() no longer starts a session
 
 - [CHG] Manager::isStarted() now checks getStatus() for PHP_SESSION_ACTIVE
@@ -26,7 +28,7 @@ There are BC breaks in this release, but it's a Google beta, so ...
 - [CHG] Segment::__get() no longer returns a reference
 
 - [BRK] Renamed Manager::getSegment() to newSegment()
-    
+
 - [CHG] Manager no longer retains session segments
 
 - [CHG] Various typo and doc fixes by Akihito Koriyama
