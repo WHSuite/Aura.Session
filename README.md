@@ -63,7 +63,7 @@ echo $segment->foo; // 'bar'
 $_SESSION['Vendor\Package\ClassName']['zim'] = 'gir'
 echo $segment->zim; // 'gir'
 ```
-    
+
 The benefit of a session segment is that we can deconflict the keys in the
 `$_SESSION` superglobal by using class names (or some other unique name) for
 the segment names. With segments, different packages can use the `$_SESSION`
@@ -102,8 +102,8 @@ the `commit()` method:
 $session->commit();
 ```
 
-> N.b.: The `commit()` method is the equivalent of `session_write_close()`. 
-> If you do not commit the session, its values will not be available when we 
+> N.b.: The `commit()` method is the equivalent of `session_write_close()`.
+> If you do not commit the session, its values will not be available when we
 > continue the session later.
 
 Any time a user has a change in privilege (that is, gaining or losing access
@@ -113,7 +113,7 @@ rights within a system) be sure to regenerate the session ID:
 <?php
 $session->regenerateId();
 ```
-    
+
 > N.b.: The `regenerateId()` method also regenerates the CSRF token value.
 
 To clear the in-memory session data, but leave the session active, use the
@@ -184,7 +184,7 @@ if ($segment->hasFlash('message')) {
     echo "No message available.";
 }
 ```
-    
+
 To clear all flash values on a segment, use the `clearFlash()` method:
 
 ```php
@@ -230,7 +230,7 @@ field:
 
 ```php
 <?php
-/**  
+/**
  * @var Vendor\Package\User $user A user-authentication object.
  * @var Aura\Session\Manager $session A session management object.
  */
@@ -243,9 +243,9 @@ field:
            . $csrf_value
            . '"></input>';
     } ?>
-    
+
     <!-- other form fields -->
-    
+
 </form>
 ```
 
@@ -254,7 +254,7 @@ for the authenticated user:
 
 ```php
 <?php
-/**  
+/**
  * @var Vendor\Package\User $user A user-authentication object.
  * @var Aura\Session\Manager $session A session management object.
  */
