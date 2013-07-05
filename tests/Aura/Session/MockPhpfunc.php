@@ -3,7 +3,7 @@ namespace Aura\Session;
 
 class MockPhpfunc extends Phpfunc
 {
-    protected $extensions = [];
+    protected $extensions = array();
 
     public function __construct()
     {
