@@ -1,5 +1,5 @@
 <?php
-
+namespace Aura\Session;
 /*
  * This file is part of the Symfony package.
  *
