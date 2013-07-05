@@ -157,11 +157,11 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetStatus()
     {
-        $expect = PHP_SESSION_NONE;
+        $expect = 0;
         $actual = $this->session->getStatus();
         $this->assertSame($expect, $actual);
 
-        $expect = PHP_SESSION_ACTIVE;
+        $expect = 1;
         $this->session->start();
         $actual = $this->session->getStatus();
         $this->assertSame($expect, $actual);
