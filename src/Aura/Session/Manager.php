@@ -422,5 +422,11 @@ class Manager
     public function getStatus()
     {
         //return session_status();
+
+        // the below change is for php versions below 5.4 as they dont have session_status();
+        if(strlen(session_id()) < 1) {
+            return (int)0;
+        }
+        return (int)1;
     }
 }
