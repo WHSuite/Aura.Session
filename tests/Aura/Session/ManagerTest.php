@@ -8,7 +8,7 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        session_set_save_handler(new MockSessionHandler);
+        //session_set_save_handler(new MockSessionHandler);
         $this->session = $this->newSession();
     }
 
