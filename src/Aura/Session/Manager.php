@@ -130,7 +130,13 @@ class Manager
      */
     public function isStarted()
     {
-        return $this->getStatus() == PHP_SESSION_ACTIVE;
+        //return $this->getStatus() == PHP_SESSION_ACTIVE;
+
+        // the below change is for php versions below 5.4 as they dont have session_status();
+        if(strlen(session_id()) < 1) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -415,6 +421,6 @@ class Manager
      */
     public function getStatus()
     {
-        return session_status();
+        //return session_status();
     }
 }
